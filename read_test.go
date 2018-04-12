@@ -22,12 +22,12 @@ func TestProcess(t *testing.T) {
 					Driver Dan
 					Trip Dan 07:15 07:45 10.0`),
 			expected: map[string]Driver{
-				"Dan": Driver{
+				"Dan": {
 					Name:       "Dan",
 					TotalMiles: 10.0,
 					TotalHours: 0.5,
 					Trips: []Trip{
-						Trip{
+						{
 							StartTime:  time.Date(0, 1, 1, 7, 15, 0, 0, time.UTC),
 							EndTime:    time.Date(0, 1, 1, 7, 45, 0, 0, time.UTC),
 							TotalHours: 0.5,

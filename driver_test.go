@@ -15,12 +15,12 @@ func TestSortDrivers(t *testing.T) {
 		{
 			name: "Success",
 			input: map[string]Driver{
-				"Dan": Driver{
+				"Dan": {
 					Name:       "Dan",
 					TotalMiles: 10.0,
 					TotalHours: 0.5,
 					Trips: []Trip{
-						Trip{
+						{
 							StartTime:  time.Date(0, 1, 1, 7, 15, 0, 0, time.UTC),
 							EndTime:    time.Date(0, 1, 1, 7, 45, 0, 0, time.UTC),
 							TotalHours: 0.5,
@@ -28,12 +28,12 @@ func TestSortDrivers(t *testing.T) {
 						},
 					},
 				},
-				"Alex": Driver{
+				"Alex": {
 					Name:       "Alex",
 					TotalMiles: 5.0,
 					TotalHours: 0.5,
 					Trips: []Trip{
-						Trip{
+						{
 							StartTime:  time.Date(0, 1, 1, 7, 15, 0, 0, time.UTC),
 							EndTime:    time.Date(0, 1, 1, 7, 45, 0, 0, time.UTC),
 							TotalHours: 0.5,
@@ -43,12 +43,12 @@ func TestSortDrivers(t *testing.T) {
 				},
 			},
 			expected: []Driver{
-				Driver{
+				{
 					Name:       "Dan",
 					TotalMiles: 10.0,
 					TotalHours: 0.5,
 					Trips: []Trip{
-						Trip{
+						{
 							StartTime:  time.Date(0, 1, 1, 7, 15, 0, 0, time.UTC),
 							EndTime:    time.Date(0, 1, 1, 7, 45, 0, 0, time.UTC),
 							TotalHours: 0.5,
@@ -56,12 +56,12 @@ func TestSortDrivers(t *testing.T) {
 						},
 					},
 				},
-				Driver{
+				{
 					Name:       "Alex",
 					TotalMiles: 5.0,
 					TotalHours: 0.5,
 					Trips: []Trip{
-						Trip{
+						{
 							StartTime:  time.Date(0, 1, 1, 7, 15, 0, 0, time.UTC),
 							EndTime:    time.Date(0, 1, 1, 7, 45, 0, 0, time.UTC),
 							TotalHours: 0.5,
