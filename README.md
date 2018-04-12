@@ -1,4 +1,6 @@
 # drivehistory
+[![Go Report Card](https://goreportcard.com/badge/github.com/tsedgwick/drivehistory)](https://goreportcard.com/report/github.com/tsedgwick/drivehistory)
+ 
 
 Reads the input file and outputs the drivers sorted by most miles driven to least.
 
